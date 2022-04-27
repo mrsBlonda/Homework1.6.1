@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class SavingsAccountTest {
     SavingsAccount sut;
 
+
     @BeforeEach
     public void init() {
         sut = new SavingsAccount(0);
@@ -34,9 +35,10 @@ public class SavingsAccountTest {
 
         // when:
         sut.pay(amount);
+        int expected = 0;
 
         // then:
-        assertEquals(sut.balance, 0 );
+        assertEquals(expected, sut.balance);
     }
     @Test
     public void transfer() {
@@ -45,9 +47,10 @@ public class SavingsAccountTest {
 
         // when:
         sut.transfer(account, amount);
+        int expected = 0;
 
         // then:
-        assertEquals(sut.balance, 0 );
+        assertEquals(expected, sut.balance);
     }
     @Test
     public void addMoney() {
@@ -56,9 +59,10 @@ public class SavingsAccountTest {
 
         // when:
         sut.addMoney(amount);
+        int expected = 5000;
 
         // then:
-        assertEquals(sut.balance, amount);
+        assertEquals(expected, sut.balance);
 
     }
 
